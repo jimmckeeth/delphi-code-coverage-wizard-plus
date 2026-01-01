@@ -41,7 +41,7 @@ One can start the tool with these command line params:
  
  ## Shell integration
  On first start the application asks whether you want to associate the DCCP project file extension
- with this application. If you do so, you can open any DCCP project file via douple click from Explorer.
+ with this application. If you do so, you can open any DCCP project file via double click from Explorer.
  In addition it will create a "verb" named "run". When right clicking on the .DCCP file you can select 
  "run" from the context menu and Delphi Code Coverage Wizard Plus will load the .DCCP file and 
  automatically run the associated batch file.

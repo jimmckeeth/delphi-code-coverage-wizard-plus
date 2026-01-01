@@ -41,6 +41,8 @@ as well.
 If you want to use the built in display of HTML formatted rerports you might need 
 EdgeView2SDK from Tools/GetIt package manager to be installed first.
 Afterwards just open and run the project provided in the Source directory.
+It will ask you to allow its build events. The build event just copies the Edge Webview 
+DLL, if that EdgeView2SDK has been installed, into the output folder so DCCP can use it.
 When run for the first time or when you installed another version of the IDE it will 
 display a dialog you can use to add it to the Tools menus of all Delphi versions/profiles 
 it finds on your computer. It will additionally ask if it shall associate the .DCCP project 
