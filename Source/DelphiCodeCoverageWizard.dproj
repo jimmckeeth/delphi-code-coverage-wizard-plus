@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{EB221752-E7EB-4749-8EFD-863662B9B3D5}</ProjectGuid>
         <ProjectVersion>20.3</ProjectVersion>
@@ -102,7 +102,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <Icon_MainIcon>..\Icons\CodeCoverageWizard.ico</Icon_MainIcon>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <VerInfo_Build>11</VerInfo_Build>
-        <PostBuildEvent><![CDATA[if exist "$(BDS)\Redist\win32\WebView2Loader.dll" (copy /Y "$(BDS)\Redist\win32\WebView2Loader.dll" "$(OUTPUTDIR)")
+        <PostBuildEvent><![CDATA[if exist "$(BDS)\Redist\win64\WebView2Loader.dll" (copy /Y "$(BDS)\Redist\win64\WebView2Loader.dll" "$(OUTPUTDIR)")
 $(PostBuildEvent)]]></PostBuildEvent>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_MajorVer>2</VerInfo_MajorVer>
@@ -222,8 +222,8 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     <Source Name="MainSource">DelphiCodeCoverageWizard.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Beispiele für gekapselte Komponenten für Automation Server</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k370.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp370.bpl">Microsoft Office XP Beispiele für gekapselte Komponenten für Automation Server</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="5">
@@ -891,6 +891,9 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     <Platform Name="Win64x">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="WinARM64EC">
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
@@ -961,6 +964,10 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <RemoteDir>Assets</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="WinARM64EC">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="UWP_DelphiLogo44">
                     <Platform Name="Win32">
@@ -968,6 +975,10 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="WinARM64EC">
                         <RemoteDir>Assets</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -1184,6 +1195,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="WinARM64EC" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
@@ -1208,7 +1220,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>if exist &quot;$(BDS)\Redist\win32\WebView2Loader.dll&quot; (copy /Y &quot;$(BDS)\Redist\win32\WebView2Loader.dll&quot; &quot;$(OUTPUTDIR)&quot;)</PostBuildEvent>
+        <PostBuildEvent>if exist &quot;$(BDS)\Redist\win64\WebView2Loader.dll&quot; (copy /Y &quot;$(BDS)\Redist\win64\WebView2Loader.dll&quot; &quot;$(OUTPUTDIR)&quot;)</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' And '$(Platform)'=='Win32'">
@@ -1224,7 +1236,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>if exist &quot;$(BDS)\Redist\win32\WebView2Loader.dll&quot; (copy /Y &quot;$(BDS)\Redist\win32\WebView2Loader.dll&quot; &quot;$(OUTPUTDIR)&quot;)</PostBuildEvent>
+        <PostBuildEvent>if exist &quot;$(BDS)\Redist\win64\WebView2Loader.dll&quot; (copy /Y &quot;$(BDS)\Redist\win64\WebView2Loader.dll&quot; &quot;$(OUTPUTDIR)&quot;)</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
 </Project>
